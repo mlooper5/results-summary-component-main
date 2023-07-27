@@ -31,11 +31,7 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
 **Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
@@ -61,27 +57,40 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This section is a recap of some of my major learnings while working through this project. Below I've included some of my key learnings throughout the project.
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+[Trick](https://www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/) for never setting pixel font sizes and making them easier to compute in your head:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+html {
+    /* 62.5% of 16px browser font size is 10px */
+    font-size: 62.5%;
+  }
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+body {
+    /* 1.8 * 10px = 18px */
+    font-size: 1.8rem; }
+```
+At the beginning of the project it's useful to define color and text variables. CSS variables are custom properties that are defined in one place and used in multiple places throughout the stylesheet.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+A powerful way to use CSS variables is to create variables based on other variables. This can be useful for keeping track of color schemes and to keep CSS rules modular.
+
+<!-- add example image -->
+
+Scoping Variables:
+
+In CSS, the scope is what determines where a variable will work based on where it is declared. There are two kinds of scope: local and global. 
+
+A locally scoped CSS variable will only affect the specific HTML element that it is declared in along with any children that element may contain.
+
+Globally scoped variables are declared in the :root pseudo-class. This pseudo-class points to the root element of the document.
+
+<!-- note about clip path learnings -->
+
+
+
+
 
 ### Continued development
 
